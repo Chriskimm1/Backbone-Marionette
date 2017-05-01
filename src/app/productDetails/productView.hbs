@@ -1,0 +1,45 @@
+<div class="mui-container-fluid">
+	<div class="mui-row product">
+		<div class="mui-col-md-6">
+			<img src="{{ selectedProduct.image }}" alt="product image" />
+		</div>
+		<div class="mui-col-md-6">
+			<div class="mui-panel product-details">
+			    <div class="mui--text-headline">{{ selectedProduct.name }}</div>
+
+			    <div class="mui--text-title">Color:</div>
+			        {{#each availableColors}}
+			            <div class="product-details__color-box{{#if selected}} selected{{/if}}" data-id="{{ id }}" style="background-color:{{ color }}"></div>
+			        {{/each}}
+
+		    	<div class="mui--text-title">Size:</div>
+			    <div class="mui-dropdown">
+				    <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">Size: {{ selectedSize }}<span class="mui-caret"></span></button>
+				    <ul class="mui-dropdown__menu sizes-dropdown">
+					{{#each availableSizes}}
+					    <li data-size="{{ size }}"><a>{{ size }}{{#if isNotAvailable}} <span class="dropdown-option__label"> - Not Available</span>{{/if}}{{#if isOnSale}} <span class="dropdown-option__label"> - On Sale</span>{{/if}}</a></li>
+					{{/each}}
+				    </ul>
+			    </div>
+
+			    <div class="mui--text-title">Qty:</div>
+			    <div class="mui-dropdown">
+				    <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">Qty: {{ selectedQty }}<span class="mui-caret"></span></button>
+				    <ul class="mui-dropdown__menu qty-dropdown">
+					    <li data-qty="1"><a>1</a></li>
+					    <li data-qty="2"><a>2</a></li>
+					    <li data-qty="3"><a>3</a></li>
+					    <li data-qty="4"><a>4</a></li>
+					    <li data-qty="5"><a>5</a></li>
+				    </ul>
+			    </div>
+
+			    <div class="mui--text-title">Price: <span class="price{{#if salePrice}} price-cut{{/if}}">{{ selectedProduct.price }}</span>{{#if salePrice}}<span class="sale-price"> {{ salePrice }}</span>{{/if}}</div>
+
+                <div class="buttonContainer col-md-6 float-right">
+                    <button class="saveBtn">Continue</button>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

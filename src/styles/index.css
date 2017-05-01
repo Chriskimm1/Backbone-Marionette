@@ -1,0 +1,107 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.mui-row {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding-top: 50px;
+}
+
+.product img {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.product-details {
+  text-align: left;
+}
+
+.product-details__color-box {
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+}
+
+.product-details__color-box.selected {
+  border: 3px solid blue;
+}
+
+#userAddress .page-title p{
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.form {
+  text-align: left;
+}
+
+.form-group {
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0rem;
+}
+
+.form-left {
+  text-align: left;
+  display: inline-block;
+  padding-left: 2rem;
+  margin-right: 2rem;
+  width: 10%
+}
+
+.form-right {
+  display: inline-block;s
+  text-align: right;
+  width: 70%;
+}
+
+.form-right input {
+  width: 90%;
+  height: 2rem;
+}
+
+.btnContainer {
+  width: 100%;
+  text-align: right;
+}
+
+.buttonContainer {
+    margin-top: 2rem;
+}
+
+.saveBtn {
+  background-color: cornflowerblue;
+  width: 10rem;
+  height: 4rem;
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+
+.saveBtn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.mui-dropdown__menu {
+  text-transform: uppercase;
+}
+
+.mui-dropdown__menu li {
+  cursor: pointer;
+}
+
+.dropdown-option__label {
+  color: red;
+}
+
+.price-cut {
+  text-decoration: line-through;
+}
+
+.sale-price {
+  color: red;
+}

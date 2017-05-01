@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Product Details</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="//cdn.muicss.com/mui-0.9.16/css/mui.min.css" rel="stylesheet" type="text/css" />
+
+  {{#each htmlWebpackPlugin.files.css}}
+    <link rel="stylesheet" href="{{htmlWebpackPlugin.options.path}}{{this}}" />
+  {{/each}}
+</head>
+<body>
+  <header class="mui-appbar mui--z1"></header>
+
+  <div id="root" class="mui--text-center"></div>
+
+  <footer>
+    <div class="mui-container mui--text-center"></div>
+  </footer>
+
+  {{#each htmlWebpackPlugin.files.js}}
+    <script type="text/javascript" src="{{htmlWebpackPlugin.options.path}}{{this}}"></script>
+  {{/each}}
+  <script src="//cdn.muicss.com/mui-0.9.16/js/mui.min.js"></script>
+</body>
+</html>
